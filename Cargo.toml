@@ -1,0 +1,43 @@
+[package]
+name = "rage-wasm"
+version = "0.1.0"
+authors = ["Kan-Ru Chen <kanru@kanru.info>"]
+repository = "https://github.com/kanru/rage-wasm"
+readme = "README.md"
+keywords = ["rage", "encryption", "wasm"]
+categories = ["cryptography"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+
+[badges]
+maintenance = { status = "experimental" }
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2.69"
+js-sys = "0.3.46"
+age = "0.5.0"
+secrecy = "0.7.0"
+
+# Enable rand_core's wasm support with js runtime
+getrandom = { version = "0.1.16", features = ["wasm-bindgen"] }
+
+# `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
+# compared to the default allocator's ~10K. It is slower than the default
+# allocator, however.
+wee_alloc = "0.4.5"
+
+[patch.crates-io]
+i18n-embed-fl = { path = "../cargo-i18n/i18n-embed-fl" }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.19"
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-Oz", "--enable-mutable-globals"]
+
+[profile.release]
+opt-level = "z"
+lto = true
