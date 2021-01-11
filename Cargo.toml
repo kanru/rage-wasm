@@ -36,8 +36,8 @@ i18n-embed-fl = { path = "../cargo-i18n/i18n-embed-fl" }
 wasm-bindgen-test = "0.3.19"
 
 [package.metadata.wasm-pack.profile.release]
-wasm-opt = ["-Oz", "--enable-mutable-globals"]
+wasm-opt = ["-Os", "--enable-mutable-globals"]
 
 [profile.release]
-opt-level = "z"
+opt-level = "s"
 lto = true
