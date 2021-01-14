@@ -7,6 +7,8 @@ use rage_wasm::{
 };
 use wasm_bindgen_test::*;
 
+wasm_bindgen_test_configure!(run_in_browser);
+
 #[wasm_bindgen_test]
 fn x25519_keygen_from_random_bytes() {
     let random = [
