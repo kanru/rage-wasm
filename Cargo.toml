@@ -16,7 +16,9 @@ wasm-opt = ["-Os", "--enable-mutable-globals"]
 maintenance = { status = "experimental" }
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "rlib"]
+# For wasm release - reduces size by 77KiB
+# crate-type = ["cdylib"]
 
 [dependencies]
 # WebAssembly interop
