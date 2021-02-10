@@ -1,6 +1,6 @@
 [package]
 name = "rage-wasm"
-version = "0.1.4"
+version = "0.2.0"
 authors = ["Kan-Ru Chen <kanru@kanru.info>"]
 repository = "https://github.com/kanru/rage-wasm"
 readme = "README.md"
@@ -8,6 +8,9 @@ keywords = ["rage", "encryption", "wasm"]
 categories = ["cryptography"]
 edition = "2018"
 license = "MIT OR Apache-2.0"
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-Os", "--enable-mutable-globals"]
 
 [badges]
 maintenance = { status = "experimental" }
@@ -34,9 +37,6 @@ wee_alloc = "0.4.5"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.20"
-
-[package.metadata.wasm-pack.profile.release]
-wasm-opt = ["-Os", "--enable-mutable-globals"]
 
 [profile.release]
 opt-level = "s"

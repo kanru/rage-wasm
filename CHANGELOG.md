@@ -2,6 +2,24 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 0.2.0 - 2021-02-10
+
+
+### Features
+
+d7489f - use rollup to bundle generated files - Kan-Ru Chen
+
+872ead - remove unused keygen_from_random_bytes function - Kan-Ru Chen
+
+
+### Miscellaneous Chores
+
+014e68 - add pre_bump_hooks to cog.toml - Kan-Ru Chen
+
+5e7595 - update wasm-bindgen - Kan-Ru Chen
+
+
+- - -
 ## 0.1.4 - 2021-02-03
 
 
