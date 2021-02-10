@@ -13,18 +13,15 @@ license = "MIT OR Apache-2.0"
 maintenance = { status = "experimental" }
 
 [lib]
-crate-type = ["cdylib", "rlib"]
+crate-type = ["cdylib"]
 
 [dependencies]
 # WebAssembly interop
-wasm-bindgen = "0.2.69"
-js-sys = "0.3.46"
+wasm-bindgen = "0.2.70"
+js-sys = "0.3.47"
 # Core encryption library
 age = { version = "0.5.0", git = "https://github.com/str4d/rage", rev = "386ccc91bd", features = ["armor", "web-sys"] }
 # For key generation
-bech32 = "0.7.2"
-zeroize = "1.2.0"
-x25519-dalek = "1.1.0"
 secrecy = "0.7.0"
 
 # Enable rand_core's wasm support with js runtime
@@ -36,7 +33,7 @@ getrandom = { version = "0.1.16", features = ["wasm-bindgen"] }
 wee_alloc = "0.4.5"
 
 [dev-dependencies]
-wasm-bindgen-test = "0.3.19"
+wasm-bindgen-test = "0.3.20"
 
 [package.metadata.wasm-pack.profile.release]
 wasm-opt = ["-Os", "--enable-mutable-globals"]
@@ -44,3 +41,4 @@ wasm-opt = ["-Os", "--enable-mutable-globals"]
 [profile.release]
 opt-level = "s"
 lto = true
+panic = 'abort'
