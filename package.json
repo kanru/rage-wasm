@@ -1,0 +1,30 @@
+{
+  "name": "@kanru/rage-wasm",
+  "collaborators": [
+    "Kan-Ru Chen <kanru@kanru.info>"
+  ],
+  "version": "0.1.4",
+  "license": "MIT OR Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanru/rage-wasm"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "watch": "rollup -c rollup.config.js --watch"
+  },
+  "files": [
+    "dist/index.js",
+    "index.d.ts",
+    "LICENSE_APACHE",
+    "LICENSE_MIT"
+  ],
+  "module": "dist/index.js",
+  "types": "index.d.ts",
+  "sideEffects": false,
+  "devDependencies": {
+    "@wasm-tool/rollup-plugin-rust": "^1.0.5",
+    "rollup": "^2.38.5",
+    "rollup-plugin-re": "^1.0.7"
+  }
+}
