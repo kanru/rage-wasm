@@ -2,6 +2,22 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 0.2.1 - 2021-02-10
+
+
+### Miscellaneous Chores
+
+2eb37c - minimal CI with github action (#1) - Kan-Ru Chen
+
+
+### Build system
+
+6ac451 - enable panic_immedate_abort when using nightly to get smallest wasm - Kan-Ru Chen
+
+21f888 - build rlib so we can run tests - Kan-Ru Chen
+
+
+- - -
 ## 0.2.0 - 2021-02-10
 
 
