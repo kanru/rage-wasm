@@ -2,25 +2,15 @@ use age::{
     armor::{ArmoredReader, ArmoredWriter, Format},
     x25519, Decryptor, Encryptor,
 };
-use bech32::ToBase32;
 use secrecy::{ExposeSecret, Secret};
 use std::{
-    convert::TryInto,
     io::{Read, Write},
     iter, vec,
 };
 use wasm_bindgen::prelude::*;
-use zeroize::Zeroize;
 
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
-
-// Use lower-case HRP to avoid https://github.com/rust-bitcoin/rust-bech32/issues/40
-const SECRET_KEY_PREFIX: &str = "age-secret-key-";
-
-fn keygen_error<T>(_: T) -> JsValue {
-    js_sys::Error::new("keygen error").into()
-}
 
 fn encrypt_error<T>(_: T) -> JsValue {
     js_sys::Error::new("encryption error").into()
@@ -28,28 +18,6 @@ fn encrypt_error<T>(_: T) -> JsValue {
 
 fn decrypt_error<T>(_: T) -> JsValue {
     js_sys::Error::new("decryption error").into()
-}
-
-#[wasm_bindgen]
-pub fn keygen_from_random_bytes(sk_bytes: &[u8]) -> Result<Vec<JsValue>, JsValue> {
-    let mut sk_bytes: [u8; 32] = sk_bytes.to_vec().try_into().map_err(keygen_error)?;
-    let secret = x25519_dalek::StaticSecret::from(sk_bytes);
-    let sk_base32 = secret.to_bytes().to_base32();
-    let mut encoded = bech32::encode(SECRET_KEY_PREFIX, sk_base32).map_err(keygen_error)?;
-    let secret_string = encoded.to_uppercase();
-
-    // Clear intermediates
-    sk_bytes.zeroize();
-    // TODO: bech32::u5 doesn't implement Zeroize
-    // sk_base32.zeroize();
-    encoded.zeroize();
-
-    let secret: x25519::Identity = secret_string.parse().map_err(keygen_error)?;
-    let public = secret.to_public();
-    Ok(vec![
-        JsValue::from(secret.to_string().expose_secret()),
-        JsValue::from(public.to_string()),
-    ])
 }
 
 #[wasm_bindgen]

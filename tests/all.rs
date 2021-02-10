@@ -3,31 +3,11 @@
 extern crate wasm_bindgen_test;
 use rage_wasm::{
     decrypt_with_user_passphrase, decrypt_with_x25519, encrypt_with_user_passphrase,
-    encrypt_with_x25519, keygen, keygen_from_random_bytes,
+    encrypt_with_x25519, keygen,
 };
 use wasm_bindgen_test::*;
 
 wasm_bindgen_test_configure!(run_in_browser);
-
-#[wasm_bindgen_test]
-fn x25519_keygen_from_random_bytes() {
-    let random = [
-        255, 148, 143, 240, 115, 122, 42, 70, 94, 185, 119, 173, 18, 197, 26, 160, 101, 77, 81,
-        186, 53, 22, 122, 247, 229, 230, 181, 153, 209, 156, 188, 253,
-    ];
-    let keys = keygen_from_random_bytes(&random).unwrap();
-    let secret_key = keys[0].as_string().unwrap();
-    let public_key = keys[1].as_string().unwrap();
-
-    assert_eq!(
-        "AGE-SECRET-KEY-1LZ2GLURN0G4YVH4EW7K393G65PJ565D6X5T84AL9U66EN5VUH37SRQ997N",
-        secret_key
-    );
-    assert_eq!(
-        "age1qa2v3e6qftcce6l66n7ej8urar9lmctyjkkx8ulk92x63duq546sqv2p3p",
-        public_key
-    );
-}
 
 #[wasm_bindgen_test]
 fn x25519_encryption_and_decryption() {
