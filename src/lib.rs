@@ -65,7 +65,7 @@ pub fn decrypt_with_x25519(secret_key: &str, data: &[u8]) -> Result<Box<[u8]>, J
     };
     let mut decrypted = vec![];
     let mut reader = decryptor
-        .decrypt(iter::once(Box::new(identity) as Box<dyn age::Identity>))
+        .decrypt(iter::once(&identity as &dyn age::Identity))
         .map_err(decrypt_error)?;
     reader.read_to_end(&mut decrypted).map_err(decrypt_error)?;
     Ok(decrypted.into_boxed_slice())
