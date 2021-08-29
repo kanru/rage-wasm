@@ -1,8 +1,8 @@
 changelog_path = "CHANGELOG.md"
 pre_bump_hooks = [
     "npm run build",
-    "npm --no-git-tag-version -f version %version",
-    "cargo bump %version",
+    "npm --no-git-tag-version -f version {{version}}",
+    "cargo bump {{version}}",
 ]
 post_bump_hooks = []
 authors = []
