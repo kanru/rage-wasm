@@ -17,6 +17,10 @@ export default {
 				{
 					test: 'input = import.meta.url.replace(/\\.js$/, \'_bg.wasm\');',
 					replace: ''
+				},
+				{
+					test: 'input = new URL(\'index_bg.wasm\', import.meta.url);',
+					replace: ''
 				}
 			]
 		})
