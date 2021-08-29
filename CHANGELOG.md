@@ -2,6 +2,34 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 0.2.2 - 2021-08-29
+
+
+### Documentation
+
+40888e - add an example with parcel, htm, and preact - Kan-Ru Chen
+
+
+### Refactoring
+
+aae08f - optimize new wasm-pack output - Kan-Ru Chen
+
+
+### Build system
+
+781a44 - fix cog pre-bump hook - Kan-Ru Chen
+
+622881 - update dependencies - Kan-Ru Chen
+
+f27933 - update dependencies - Kan-Ru Chen
+
+
+### Bug Fixes
+
+a5c93e - use correct return type in type declaration - Kan-Ru Chen
+
+
+- - -
 ## 0.2.1 - 2021-02-10
 
 
