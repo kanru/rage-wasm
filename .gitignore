@@ -6,3 +6,4 @@ wasm-pack.log
 node_modules
 dist
 .parcel-cache
+.vscode
