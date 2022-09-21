@@ -1,0 +1,93 @@
+
+# cargo-vet audits file
+
+[[audits.age]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "0.6.0"
+
+[[audits.cfg-if]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "0.1.10"
+
+[[audits.cfg-if]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "0.1.10"
+
+[[audits.cfg-if]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "0.1.10"
+
+[[audits.cfg-if]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.1.10 -> 1.0.0"
+
+[[audits.console_error_panic_hook]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-run"
+version = "0.1.6"
+
+[[audits.getrandom]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "0.1.16"
+
+[[audits.proc-macro2]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "1.0.39 -> 1.0.28"
+
+[[audits.quote]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "1.0.18 -> 1.0.9"
+
+[[audits.scoped-tls]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-run"
+version = "1.0.0"
+
+[[audits.secrecy]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "0.7.0"
+
+[[audits.synstructure]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.12.6 -> 0.12.5"
+
+[[audits.unicode-xid]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "0.2.2"
+
+[[audits.wasm-bindgen-futures]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-run"
+version = "0.4.26"
+
+[[audits.wasm-bindgen-test]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-run"
+version = "0.3.26"
+
+[[audits.wasm-bindgen-test-macro]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-run"
+version = "0.3.26"
+
+[[audits.zeroize]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "1.4.1"
+
+[[audits.zeroize_derive]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "1.1.0"
+
