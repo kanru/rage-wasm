@@ -1,40 +1,39 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the action will run. 
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  test:
-    # The type of runner that the job will run on
+  cargo-vet:
+    name: Vet Dependencies
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    env:
+      CARGO_VET_VERSION: 0.3.0
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@master
+    - name: Install Rust
+      run: rustup update stable && rustup default stable
+    - uses: actions/cache@v2
+      with:
+        path: ${{ runner.tool_cache }}/cargo-vet
+        key: cargo-vet-bin-${{ env.CARGO_VET_VERSION }}
+    - name: Add the tool cache directory to the search path
+      run: echo "${{ runner.tool_cache }}/cargo-vet/bin" >> $GITHUB_PATH
+    - name: Ensure that the tool cache is populated with the cargo-vet binary
+      run: cargo install --root ${{ runner.tool_cache }}/cargo-vet --version ${{ env.CARGO_VET_VERSION }} cargo-vet
+    - name: Invoke cargo-vet
+      run: cargo vet --locked
+  test:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v2
-      
       - name: Install rust-toolchain
         uses: actions-rs/toolchain@v1.0.6
         with:
           toolchain: stable
-      
       - name: Install wasm-pack
         uses: jetli/wasm-pack-action@v0.3.0
         with:
           version: latest
-      
       - name: Test Firefox
         run: wasm-pack test --headless --firefox
       - name: Test Chrome
