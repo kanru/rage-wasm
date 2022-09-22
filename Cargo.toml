@@ -13,9 +13,9 @@ license = "MIT OR Apache-2.0"
 maintenance = { status = "experimental" }
 
 [lib]
-# crate-type = ["cdylib", "rlib"]
+crate-type = ["cdylib", "rlib"]
 # For wasm release - reduces size by 77KiB
-crate-type = ["cdylib"]
+# crate-type = ["cdylib"]
 
 [dependencies]
 # WebAssembly interop
