@@ -45,15 +45,14 @@ npm install
 npm run build
 ```
 
+### 🔬 Test in Headless Browsers
+
+```
+npm test
+```
+
 ### 🎁 Publish to NPM
 
 ```
 npm publish
-```
-
-### 🔬 Test in Headless Browsers with `wasm-pack test`
-
-```
-wasm-pack build
-wasm-pack test --headless --firefox
 ```
