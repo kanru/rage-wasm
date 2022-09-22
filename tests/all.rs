@@ -58,7 +58,7 @@ fn passphrase_encryption_and_decryption() {
 fn passphrase_unarmored_encryption_and_decryption() {
     let key = "password";
     let data = "test";
-    let encrypted = encrypt_with_user_passphrase(&key, data.as_bytes(), true).unwrap();
+    let encrypted = encrypt_with_user_passphrase(&key, data.as_bytes(), false).unwrap();
     let decrypted = decrypt_with_user_passphrase(&key, &encrypted).unwrap();
 
     assert_eq!(data.as_bytes(), decrypted.as_ref());

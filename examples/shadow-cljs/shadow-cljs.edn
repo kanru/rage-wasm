@@ -1,0 +1,13 @@
+{:source-paths
+ ["src/main"]
+
+ :dependencies
+ [[funcool/promesa "4.0.2"]]
+
+ :dev-http {8060 "public"}
+
+ :builds
+ {:app
+  {:target :browser
+   :modules {:main {:init-fn app/init}}
+   :compiler-options {:output-feature-set :es8}}}}
