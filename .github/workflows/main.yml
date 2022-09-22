@@ -23,18 +23,19 @@ jobs:
     - name: Invoke cargo-vet
       run: cargo vet --locked
   test:
+    name: Web Test Runner
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install rust-toolchain
-        uses: actions-rs/toolchain@v1.0.6
+        uses: dtolnay/rust-toolchain@master
         with:
-          toolchain: stable
-      - name: Install wasm-pack
-        uses: jetli/wasm-pack-action@v0.3.0
+          toolchain: nightly-2022-09-20
+          targets: wasm32-unknown-unknown
+          components: rust-src
+      - uses: actions/setup-node@v3
         with:
-          version: latest
-      - name: Test Firefox
-        run: wasm-pack test --headless --firefox
-      - name: Test Chrome
-        run: wasm-pack test --headless --chrome
+          node-version: 16
+      - uses: microsoft/playwright-github-action@v1
+      - name: Install dependencies and run tests
+        run: npm install && npm run build && npm test

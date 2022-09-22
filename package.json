@@ -11,6 +11,7 @@
   },
   "scripts": {
     "build": "RUSTFLAGS='-C target-feature=+atomics,+bulk-memory,+mutable-globals' rollup -c rollup.config.mjs",
+    "test": "web-test-runner tests/**/*.test.js --node-resolve --playwright --browsers chromium firefox webkit",
     "clean": "cargo clean"
   },
   "files": [
@@ -24,7 +25,10 @@
   "types": "index.d.ts",
   "sideEffects": false,
   "devDependencies": {
+    "@esm-bundle/chai": "^4.3.4-fix.0",
     "@wasm-tool/rollup-plugin-rust": "^2.3.1",
+    "@web/test-runner": "^0.14.0",
+    "@web/test-runner-playwright": "^0.8.10",
     "rollup": "^3.0.0-6",
     "rollup-plugin-re": "^1.0.7"
   }
