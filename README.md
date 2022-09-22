@@ -23,20 +23,37 @@ descryption operations.
 npm install @kanru/rage-wasm
 ```
 
-### 🛠️ Build with `wasm-pack build`
+The package exports a single module with 5 async methods. Upon first use
+an inlined webassembly module will be loaded asynchronously.
+
+- keygen - generate x25519 key pairs
+- encrypt_with_x25519
+- decrypt_with_x25519
+- encrypt_with_user_passphrase
+- decrypt_with_user_passphrase
+
+### Examples
+
+Some examples with parcel or shadow-cljs are available under the `examples/` directory.
+
+## Contribute
+
+### 🛠️ Build
 
 ```
-wasm-pack build
+npm install
+npm run build
+```
+
+### 🎁 Publish to NPM
+
+```
+npm publish
 ```
 
 ### 🔬 Test in Headless Browsers with `wasm-pack test`
 
 ```
+wasm-pack build
 wasm-pack test --headless --firefox
-```
-
-### 🎁 Publish to NPM with `wasm-pack publish`
-
-```
-wasm-pack publish
 ```
