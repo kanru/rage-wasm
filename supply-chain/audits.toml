@@ -1,10 +1,35 @@
 
 # cargo-vet audits file
 
+[[audits.aead]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.3.2 -> 0.4.3"
+
 [[audits.age]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-deploy"
 version = "0.6.0"
+
+[[audits.age]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.6.0 -> 0.8.1"
+
+[[audits.age-core]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.6.0 -> 0.8.0"
+
+[[audits.block-buffer]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.9.0 -> 0.10.3"
+
+[[audits.bumpalo]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "3.7.0 -> 3.11.0"
 
 [[audits.cfg-if]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
@@ -26,15 +51,145 @@ who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-deploy"
 delta = "0.1.10 -> 1.0.0"
 
+[[audits.chacha20poly1305]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.7.1 -> 0.9.1"
+
+[[audits.cipher]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.3.0 -> 0.4.3"
+
 [[audits.console_error_panic_hook]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-run"
 version = "0.1.6"
 
+[[audits.console_error_panic_hook]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-run"
+delta = "0.1.6 -> 0.1.7"
+
+[[audits.cpufeatures]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.2.1 -> 0.2.5"
+
+[[audits.crypto-common]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "0.1.3"
+
+[[audits.dashmap]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "4.0.2 -> 5.4.0"
+
+[[audits.digest]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.9.0 -> 0.10.5"
+
+[[audits.generic-array]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.14.4 -> 0.14.5"
+
 [[audits.getrandom]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-deploy"
 version = "0.1.16"
+
+[[audits.getrandom]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.1.16 -> 0.2.6"
+
+[[audits.hkdf]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.11.0 -> 0.12.3"
+
+[[audits.hmac]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.11.0 -> 0.12.1"
+
+[[audits.i18n-embed]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.12.1 -> 0.13.4"
+
+[[audits.i18n-embed-fl]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.5.0 -> 0.6.4"
+
+[[audits.i18n-embed-impl]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.7.0 -> 0.8.0"
+
+[[audits.inout]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "0.1.3"
+
+[[audits.io_tee]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "0.1.1"
+
+[[audits.js-sys]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.3.53 -> 0.3.60"
+
+[[audits.libc]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.2.101 -> 0.2.133"
+
+[[audits.lock_api]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.4.5 -> 0.4.9"
+
+[[audits.nom]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "6.2.1 -> 7.1.1"
+
+[[audits.parking_lot]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.11.2 -> 0.12.1"
+
+[[audits.parking_lot_core]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.8.5 -> 0.9.3"
+
+[[audits.pbkdf2]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.8.0 -> 0.10.1"
+
+[[audits.pin-project-internal]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "1.0.8 -> 1.0.12"
+
+[[audits.poly1305]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.6.2 -> 0.7.2"
+
+[[audits.ppv-lite86]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.2.10 -> 0.2.16"
 
 [[audits.proc-macro2]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
@@ -46,32 +201,177 @@ who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-deploy"
 delta = "1.0.18 -> 1.0.9"
 
+[[audits.rand]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.7.3 -> 0.8.5"
+
+[[audits.rand_chacha]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.2.2 -> 0.3.1"
+
+[[audits.rand_core]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.5.1 -> 0.6.4"
+
+[[audits.rust-embed]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "5.9.0 -> 6.4.1"
+
+[[audits.rust-embed-impl]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "5.9.0 -> 6.3.0"
+
+[[audits.rust-embed-utils]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "5.1.0 -> 7.3.0"
+
+[[audits.salsa20]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.8.1 -> 0.10.2"
+
 [[audits.scoped-tls]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-run"
 version = "1.0.0"
+
+[[audits.scrypt]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.7.0 -> 0.9.0"
 
 [[audits.secrecy]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-deploy"
 version = "0.7.0"
 
+[[audits.secrecy]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.7.0 -> 0.8.0"
+
+[[audits.serde]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "1.0.130 -> 1.0.137"
+
+[[audits.serde_derive]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "1.0.130 -> 1.0.137"
+
+[[audits.sha2]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.9.6 -> 0.9.9"
+
+[[audits.sha2]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.9.9 -> 0.10.6"
+
+[[audits.smallvec]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "1.6.1 -> 1.8.0"
+
 [[audits.synstructure]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-deploy"
 delta = "0.12.6 -> 0.12.5"
+
+[[audits.thiserror]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "1.0.28 -> 1.0.35"
+
+[[audits.thiserror-impl]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "1.0.28 -> 1.0.35"
+
+[[audits.toml]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.5.8 -> 0.5.9"
+
+[[audits.typenum]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "1.13.0 -> 1.15.0"
+
+[[audits.unicode-ident]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+version = "1.0.4"
 
 [[audits.unicode-xid]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-deploy"
 version = "0.2.2"
 
+[[audits.unicode-xid]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.2.2 -> 0.2.4"
+
+[[audits.version_check]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.9.3 -> 0.9.4"
+
+[[audits.wasm-bindgen]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.2.76 -> 0.2.83"
+
+[[audits.wasm-bindgen-backend]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.2.76 -> 0.2.83"
+
 [[audits.wasm-bindgen-futures]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-run"
 version = "0.4.26"
 
+[[audits.wasm-bindgen-futures]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-run"
+delta = "0.4.26 -> 0.4.33"
+
+[[audits.wasm-bindgen-macro]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.2.76 -> 0.2.83"
+
+[[audits.wasm-bindgen-macro-support]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.2.76 -> 0.2.83"
+
+[[audits.wasm-bindgen-shared]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.2.76 -> 0.2.83"
+
 [[audits.wasm-bindgen-test]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-run"
+version = "0.3.26"
+
+[[audits.wasm-bindgen-test]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-run"
+delta = "0.3.26 -> 0.3.33"
+
+[[audits.wasm-bindgen-test-macro]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-run"
 version = "0.3.26"
@@ -79,15 +379,30 @@ version = "0.3.26"
 [[audits.wasm-bindgen-test-macro]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-run"
-version = "0.3.26"
+delta = "0.3.26 -> 0.3.33"
+
+[[audits.web-sys]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "0.3.53 -> 0.3.60"
 
 [[audits.zeroize]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-deploy"
 version = "1.4.1"
 
+[[audits.zeroize]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "1.4.1 -> 1.5.7"
+
 [[audits.zeroize_derive]]
 who = "Kan-Ru Chen <kanru@kanru.info>"
 criteria = "safe-to-deploy"
 version = "1.1.0"
+
+[[audits.zeroize_derive]]
+who = "Kan-Ru Chen <kanru@kanru.info>"
+criteria = "safe-to-deploy"
+delta = "1.1.0 -> 1.3.2"
 

@@ -1,46 +1,39 @@
 [package]
 name = "rage-wasm"
-version = "0.2.2"
+version = "0.3.0"
 authors = ["Kan-Ru Chen <kanru@kanru.info>"]
 repository = "https://github.com/kanru/rage-wasm"
 readme = "README.md"
 keywords = ["rage", "encryption", "wasm"]
 categories = ["cryptography"]
-edition = "2018"
+edition = "2021"
 license = "MIT OR Apache-2.0"
-
-[package.metadata.wasm-pack.profile.release]
-wasm-opt = ["-Os", "--enable-mutable-globals"]
 
 [badges]
 maintenance = { status = "experimental" }
 
 [lib]
-crate-type = ["cdylib", "rlib"]
+# crate-type = ["cdylib", "rlib"]
 # For wasm release - reduces size by 77KiB
-# crate-type = ["cdylib"]
+crate-type = ["cdylib"]
 
 [dependencies]
 # WebAssembly interop
-wasm-bindgen = "0.2.70"
-js-sys = "0.3.47"
+wasm-bindgen = "0.2.83"
+js-sys = "0.3.60"
 # Core encryption library
-age = { version = "0.6.0", features = ["armor", "web-sys"] }
+age = { version = "0.8.1", features = ["armor", "web-sys"] }
 # For key generation
-secrecy = "0.7.0"
+secrecy = "0.8.0"
 
 # Enable rand_core's wasm support with js runtime
-getrandom = { version = "0.1.16", features = ["wasm-bindgen"] }
-
-# `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
-# compared to the default allocator's ~10K. It is slower than the default
-# allocator, however.
-wee_alloc = "0.4.5"
+getrandom_2_7 = { package = "getrandom", version = "0.2.7", features = ["js"] }
+getrandom_1_16 = { package = "getrandom", version = "0.1.16", features = ["wasm-bindgen"] }
 
 [dev-dependencies]
-wasm-bindgen-test = "0.3.20"
+wasm-bindgen-test = "0.3.33"
 
 [profile.release]
-opt-level = "s"
+opt-level = "z"
 lto = true
 panic = 'abort'

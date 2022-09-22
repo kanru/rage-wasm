@@ -8,7 +8,8 @@ export default {
 	},
 	plugins: [
 		rust({
-			cargoArgs: ["-Z", "build-std=std,panic_abort", "-Z", "build-std-features=panic_immediate_abort"],
+			cargoArgs: ["-Zbuild-std=std,panic_abort", "-Zbuild-std-features=panic_immediate_abort"],
+			wasmOptArgs: ["-Oz"],
 			verbose: true,
 			inlineWasm: true
 		}),

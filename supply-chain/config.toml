@@ -4,10 +4,6 @@
 [imports.firefox]
 url = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
-[[exemptions.Inflector]]
-version = "0.11.4"
-criteria = "safe-to-deploy"
-
 [[exemptions.aead]]
 version = "0.3.2"
 criteria = "safe-to-deploy"
@@ -28,10 +24,6 @@ criteria = "safe-to-deploy"
 version = "1.3.2"
 criteria = "safe-to-deploy"
 
-[[exemptions.bitvec]]
-version = "0.19.5"
-criteria = "safe-to-deploy"
-
 [[exemptions.block-buffer]]
 version = "0.9.0"
 criteria = "safe-to-deploy"
@@ -44,16 +36,12 @@ criteria = "safe-to-deploy"
 version = "1.4.3"
 criteria = "safe-to-deploy"
 
-[[exemptions.c2-chacha]]
-version = "0.3.1"
+[[exemptions.chacha20]]
+version = "0.8.2"
 criteria = "safe-to-deploy"
 
 [[exemptions.chacha20poly1305]]
 version = "0.7.1"
-criteria = "safe-to-deploy"
-
-[[exemptions.cipher]]
-version = "0.2.5"
 criteria = "safe-to-deploy"
 
 [[exemptions.cipher]]
@@ -66,14 +54,6 @@ criteria = "safe-to-deploy"
 
 [[exemptions.cpufeatures]]
 version = "0.2.1"
-criteria = "safe-to-deploy"
-
-[[exemptions.cpuid-bool]]
-version = "0.2.0"
-criteria = "safe-to-deploy"
-
-[[exemptions.crypto-mac]]
-version = "0.11.1"
 criteria = "safe-to-deploy"
 
 [[exemptions.curve25519-dalek]]
@@ -92,24 +72,8 @@ criteria = "safe-to-deploy"
 version = "0.6.3"
 criteria = "safe-to-deploy"
 
-[[exemptions.fluent]]
-version = "0.15.0"
-criteria = "safe-to-deploy"
-
-[[exemptions.fluent-bundle]]
-version = "0.15.1"
-criteria = "safe-to-deploy"
-
-[[exemptions.funty]]
-version = "1.1.0"
-criteria = "safe-to-deploy"
-
 [[exemptions.generic-array]]
 version = "0.14.4"
-criteria = "safe-to-deploy"
-
-[[exemptions.hermit-abi]]
-version = "0.1.19"
 criteria = "safe-to-deploy"
 
 [[exemptions.hkdf]]
@@ -136,10 +100,6 @@ criteria = "safe-to-deploy"
 version = "0.7.0"
 criteria = "safe-to-deploy"
 
-[[exemptions.instant]]
-version = "0.1.10"
-criteria = "safe-to-deploy"
-
 [[exemptions.js-sys]]
 version = "0.3.53"
 criteria = "safe-to-deploy"
@@ -156,36 +116,24 @@ criteria = "safe-to-deploy"
 version = "0.4.5"
 criteria = "safe-to-deploy"
 
-[[exemptions.log]]
-version = "0.4.14"
-criteria = "safe-to-deploy"
-
 [[exemptions.memchr]]
 version = "2.3.4"
 criteria = "safe-to-deploy"
 
-[[exemptions.memory_units]]
-version = "0.4.0"
+[[exemptions.minimal-lexical]]
+version = "0.2.1"
 criteria = "safe-to-deploy"
 
 [[exemptions.nom]]
 version = "6.2.1"
 criteria = "safe-to-deploy"
 
-[[exemptions.num_cpus]]
-version = "1.13.0"
+[[exemptions.once_cell]]
+version = "1.15.0"
 criteria = "safe-to-deploy"
 
 [[exemptions.opaque-debug]]
 version = "0.3.0"
-criteria = "safe-to-deploy"
-
-[[exemptions.ouroboros]]
-version = "0.9.5"
-criteria = "safe-to-deploy"
-
-[[exemptions.ouroboros_macro]]
-version = "0.9.5"
 criteria = "safe-to-deploy"
 
 [[exemptions.parking_lot]]
@@ -201,7 +149,7 @@ version = "0.8.0"
 criteria = "safe-to-deploy"
 
 [[exemptions.pin-project]]
-version = "1.0.8"
+version = "1.0.12"
 criteria = "safe-to-deploy"
 
 [[exemptions.pin-project-internal]]
@@ -241,7 +189,7 @@ version = "0.2.0"
 criteria = "safe-to-deploy"
 
 [[exemptions.redox_syscall]]
-version = "0.2.10"
+version = "0.2.13"
 criteria = "safe-to-deploy"
 
 [[exemptions.rust-embed]]
@@ -272,6 +220,10 @@ criteria = "safe-to-deploy"
 version = "0.7.0"
 criteria = "safe-to-deploy"
 
+[[exemptions.self_cell]]
+version = "0.10.2"
+criteria = "safe-to-deploy"
+
 [[exemptions.serde]]
 version = "1.0.130"
 criteria = "safe-to-deploy"
@@ -288,10 +240,6 @@ criteria = "safe-to-deploy"
 version = "1.6.1"
 criteria = "safe-to-deploy"
 
-[[exemptions.stable_deref_trait]]
-version = "1.2.0"
-criteria = "safe-to-deploy"
-
 [[exemptions.strsim]]
 version = "0.10.0"
 criteria = "safe-to-deploy"
@@ -301,11 +249,7 @@ version = "2.4.1"
 criteria = "safe-to-deploy"
 
 [[exemptions.syn]]
-version = "1.0.75"
-criteria = "safe-to-deploy"
-
-[[exemptions.tap]]
-version = "1.0.1"
+version = "1.0.100"
 criteria = "safe-to-deploy"
 
 [[exemptions.thiserror]]
@@ -344,6 +288,10 @@ criteria = "safe-to-deploy"
 version = "0.9.0+wasi-snapshot-preview1"
 criteria = "safe-to-deploy"
 
+[[exemptions.wasi]]
+version = "0.11.0+wasi-snapshot-preview1"
+criteria = "safe-to-deploy"
+
 [[exemptions.wasm-bindgen]]
 version = "0.2.76"
 criteria = "safe-to-deploy"
@@ -368,10 +316,6 @@ criteria = "safe-to-deploy"
 version = "0.3.53"
 criteria = "safe-to-deploy"
 
-[[exemptions.wee_alloc]]
-version = "0.4.5"
-criteria = "safe-to-deploy"
-
 [[exemptions.winapi]]
 version = "0.3.9"
 criteria = "safe-to-deploy"
@@ -388,8 +332,28 @@ criteria = "safe-to-deploy"
 version = "0.4.0"
 criteria = "safe-to-deploy"
 
-[[exemptions.wyz]]
-version = "0.2.0"
+[[exemptions.windows-sys]]
+version = "0.36.1"
+criteria = "safe-to-deploy"
+
+[[exemptions.windows_aarch64_msvc]]
+version = "0.36.1"
+criteria = "safe-to-deploy"
+
+[[exemptions.windows_i686_gnu]]
+version = "0.36.1"
+criteria = "safe-to-deploy"
+
+[[exemptions.windows_i686_msvc]]
+version = "0.36.1"
+criteria = "safe-to-deploy"
+
+[[exemptions.windows_x86_64_gnu]]
+version = "0.36.1"
+criteria = "safe-to-deploy"
+
+[[exemptions.windows_x86_64_msvc]]
+version = "0.36.1"
 criteria = "safe-to-deploy"
 
 [[exemptions.x25519-dalek]]

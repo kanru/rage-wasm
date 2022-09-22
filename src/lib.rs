@@ -9,9 +9,6 @@ use std::{
 };
 use wasm_bindgen::prelude::*;
 
-#[global_allocator]
-static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
-
 fn encrypt_error<T>(_: T) -> JsValue {
     js_sys::Error::new("encryption error").into()
 }

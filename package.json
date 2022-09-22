@@ -3,15 +3,15 @@
   "collaborators": [
     "Kan-Ru Chen <kanru@kanru.info>"
   ],
-  "version": "0.2.2",
+  "version": "0.3.0",
   "license": "MIT OR Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/kanru/rage-wasm"
   },
   "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "watch": "rollup -c rollup.config.js --watch"
+    "build": "RUSTFLAGS='-C target-feature=+atomics,+bulk-memory,+mutable-globals' rollup -c rollup.config.mjs",
+    "clean": "cargo clean"
   },
   "files": [
     "dist/index.js",
@@ -19,12 +19,13 @@
     "LICENSE_APACHE",
     "LICENSE_MIT"
   ],
+  "type": "module",
   "module": "dist/index.js",
   "types": "index.d.ts",
   "sideEffects": false,
   "devDependencies": {
-    "@wasm-tool/rollup-plugin-rust": "^1.0.5",
-    "rollup": "^2.38.5",
+    "@wasm-tool/rollup-plugin-rust": "^2.3.1",
+    "rollup": "^3.0.0-6",
     "rollup-plugin-re": "^1.0.7"
   }
 }
