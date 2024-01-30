@@ -14,8 +14,6 @@ maintenance = { status = "experimental" }
 
 [lib]
 crate-type = ["cdylib", "rlib"]
-# For wasm release - reduces size by 77KiB
-# crate-type = ["cdylib"]
 
 [dependencies]
 # WebAssembly interop
