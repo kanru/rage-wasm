@@ -22,7 +22,7 @@ crate-type = ["cdylib", "rlib"]
 wasm-bindgen = "0.2.83"
 js-sys = "0.3.60"
 # Core encryption library
-age = { version = "0.8.1", features = ["armor", "web-sys"] }
+age = { version = "0.9.2", features = ["armor", "web-sys"] }
 # For key generation
 secrecy = "0.8.0"
 

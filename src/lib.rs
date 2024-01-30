@@ -34,8 +34,8 @@ pub fn encrypt_with_x25519(
     armor: bool,
 ) -> Result<Box<[u8]>, JsValue> {
     let key: x25519::Recipient = public_key.parse().map_err(encrypt_error)?;
-    let recipients = vec![Box::new(key) as Box<dyn age::Recipient>];
-    let encryptor = Encryptor::with_recipients(recipients);
+    let recipients = vec![Box::new(key) as Box<dyn age::Recipient + Send + 'static>];
+    let encryptor = Encryptor::with_recipients(recipients).unwrap();
     let mut output = vec![];
     let format = if armor {
         Format::AsciiArmor
