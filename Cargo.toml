@@ -1,6 +1,6 @@
 [package]
 name = "rage-wasm"
-version = "0.3.0"
+version = "0.3.1"
 authors = ["Kan-Ru Chen <kanru@kanru.info>"]
 repository = "https://github.com/kanru/rage-wasm"
 readme = "README.md"
