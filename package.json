@@ -7,7 +7,7 @@
   "license": "MIT OR Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kanru/rage-wasm"
+    "url": "git+https://github.com/kanru/rage-wasm.git"
   },
   "scripts": {
     "build": "RUSTFLAGS='-C target-feature=+atomics,+bulk-memory,+mutable-globals' rollup -c rollup.config.mjs",
